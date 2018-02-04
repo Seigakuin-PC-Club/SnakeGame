@@ -31,7 +31,7 @@ function init() {
     addFood();
   }
 
-  timer = setInterval("tick()", 2000);
+  timer = setInterval("tick()", 200);
   window.onkeydown = keydown; // キーが押されたら keydown function を実行
 }
 
@@ -71,11 +71,9 @@ function tick() {
       paint();
       return;
   }
-  snake.unshift(new Point(x, y));
-  console.log(snake);
+  snake.unshift(new Point(x, y)); // 新しい場所に描画
 
-  snake.pop();
-  console.log(snake);
+  snake.pop(); // 蛇の尻尾を消す
 
   paint();
 }
