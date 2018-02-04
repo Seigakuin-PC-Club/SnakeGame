@@ -4,6 +4,14 @@ let ctx;
 window.onload = init;
 
 
+// Point オブジェクト
+class Point {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+}
+
 //init
 function init() {
   const canvas = document.getElementById('field');
