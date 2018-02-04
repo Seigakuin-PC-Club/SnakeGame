@@ -27,7 +27,7 @@ function addFood() {
 
 // collision
 function isHit(data, x, y) {
-
+  
 }
 
 
