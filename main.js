@@ -26,6 +26,11 @@ function init() {
   // 蛇を初期化
   snake.push(new Point(W / 2, H / 2));
   
+  // 餌の初期化
+  for (let i = 0; i < 30; i++) {
+    addFood();
+  }
+  
   timer = setInterval("tick()", 200);
   
 }
@@ -48,7 +53,7 @@ function moveFood(x, y) {
 
 // フレームごとに実行されるfunction
 function tick() {
-  addFood();
+  // addFood();
   paint();
 }
 
