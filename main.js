@@ -15,7 +15,7 @@ class Point {
   }
 }
 
-//init
+//initialize
 function init() {
   const canvas = document.getElementById("field");
   W = canvas.clientHeight / S;
@@ -81,12 +81,12 @@ function tick() {
 function paint() {
   ctx.clearRect(0, 0, W * S, H * S); // 画面を毎回クリアするため
   ctx.fillStyle = "rgb(255, 255, 255)"; // white
-  snake.forEach(function(p) {
+  snake.forEach(function (p) {
     ctx.fillText("*", p.x * S, (p.y + 1) * S);
   });
 
   ctx.fillStyle = "rgb(255, 100, 100)"; // white
-  food.forEach(function(p) {
+  food.forEach(function (p) {
     ctx.fillText("*", p.x * S, (p.y + 1) * S);
   });
 }
