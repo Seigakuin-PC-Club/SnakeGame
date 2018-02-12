@@ -31,7 +31,7 @@ function init() {
     addFood();
   }
 
-  timer = setInterval("tick()", 200); // フレームレート 200ms ごとに tick() functionを実行
+  timer = setInterval("tick()", 200);
   window.onkeydown = keydown; // キーが押されたら keydown function を実行
 }
 
