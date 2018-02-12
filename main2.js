@@ -15,7 +15,7 @@ class Point {
   }
 }
 
-//initialize
+//init
 function init() {
   const canvas = document.getElementById("field");
   W = canvas.clientHeight / S;
@@ -31,11 +31,7 @@ function init() {
     addFood();
   }
 
-<<<<<<< HEAD
   timer = setInterval("tick()", 200);
-=======
-  timer = setInterval("tick()", 200); // フレームレート 200ms ごとに tick() functionを実行
->>>>>>> maaster
   window.onkeydown = keydown; // キーが押されたら keydown function を実行
 }
 
@@ -75,9 +71,11 @@ function tick() {
       paint();
       return;
   }
-  snake.unshift(new Point(x, y)); // 新しい場所に描画
+  snake.unshift(new Point(x, y));
+  console.log(snake);
 
-  snake.pop(); // 蛇の尻尾を消す
+  snake.pop();
+  console.log(snake);
 
   paint();
 }
@@ -85,12 +83,12 @@ function tick() {
 function paint() {
   ctx.clearRect(0, 0, W * S, H * S); // 画面を毎回クリアするため
   ctx.fillStyle = "rgb(255, 255, 255)"; // white
-  snake.forEach(function (p) {
+  snake.forEach(function(p) {
     ctx.fillText("*", p.x * S, (p.y + 1) * S);
   });
 
   ctx.fillStyle = "rgb(255, 100, 100)"; // white
-  food.forEach(function (p) {
+  food.forEach(function(p) {
     ctx.fillText("*", p.x * S, (p.y + 1) * S);
   });
 }
